@@ -1,0 +1,463 @@
+%================================= 
+% 
+%                   this is LaTeX-2e source 
+% 
+%================================= 
+
+%================================= 
+%       please do not change this formatting 
+%================================= 
+\documentclass[10pt]{article} 
+\parindent=0pt \parskip=8pt    
+\textwidth=5in 
+\hoffset=.3in 
+\usepackage{amssymb,amsmath,amsthm,mathrsfs} 
+\pagestyle{headings} 
+
+
+\title{A Book of Abstract Algebra \\ Charles Pinter } 
+%================================= 
+%   replace 'your name here' with your name! 
+%================================= 
+\author{Chapter Two Exercises\\Daniel Hughes} 
+\date{\today} 
+
+\begin{document} 
+\maketitle 
+
+\begin{center}
+\textbf{A. Examples of Operations}
+\end{center}
+\fbox{\parbox{\textwidth}{\vskip.2em 
+1. $a * b = \sqrt{|ab|}$ on the set $\mathbb{Q}$.
+%   insert the statement of problem 1 above this line 
+\vskip.2em }} 
+\vskip1em 
+{\it Solution.} 
+%   insert your solution to problem 1 below this line 
+This is not an operation on $\mathbb{Q}$. It violates $a * b$ being uniquely defined. For example $\sqrt{|4 \cdot 1|} = \sqrt{4} = \pm 2$.
+\\It is also not closed. For example $\sqrt{|2 \cdot 1|} = \sqrt{2}$ which is not a rational number.
+
+\fbox{\parbox{\textwidth}{\vskip.2em 
+2. $a * b = a \ln b$ on the set $\{x \in \mathbb{R}: x > 0 \}$.
+%   insert the statement of problem 2 above this line 
+\vskip.2em  }} 
+\vskip1em 
+{\it Solution.} 
+%   insert your solution to problem 2 below this line 
+This is a valid operation.
+
+\fbox{\parbox{\textwidth}{\vskip.2em 
+3. $a * b$ is a root of the equation $x^2 - a^2b^2 = 0$, on the set $\mathbb{R}$.
+%   insert the statement of problem 3 above this line  
+\vskip.2em }} 
+\vskip1em 
+{\it Solution.} 
+%   insert your solution to problem 3 below this line 
+This is not an operation on $\mathbb{R}$ as it is not uniquely defined for any $a, b \in \mathbb{R}$ as we have roots $x = \pm ab$
+
+\fbox{\parbox{\textwidth}{\vskip.2em 
+4. Subtraction on the set $\mathbb{Z}$.
+%   insert the statement of problem 4 above this line  
+\vskip.2em }} 
+\vskip1em 
+{\it Solution.} 
+%   insert your solution to problem 4 below this line 
+This is a valid operation.
+
+\fbox{\parbox{\textwidth}{\vskip.2em 
+5. Subtraction, on the set $\{n \in \mathbb{Z}: n \geq 0 \}$.
+%   insert the statement of problem 5 above this line   
+\vskip.2em }} 
+\vskip1em 
+{\it Solution.} 
+%   insert your solution to problem 5 below this line 
+This is not an operation on the given set as it is not closed. For example $4 - 5 = -1$ and $-1$ is not an element of the set.
+
+\fbox{\parbox{\textwidth}{\vskip.2em 
+6. $a * b = |a - b|$, on the set $\{n \in \mathbb{Z}: n \geq 0 \}$.
+%   insert the statement of problem 5 above this line   
+\vskip.2em }} 
+\vskip1em 
+{\it Solution.} 
+%   insert your solution to problem 5 below this line 
+This is a valid operation.
+
+\begin{center}
+\textbf{B. Properties of Operations}
+\end{center}
+
+\fbox{\parbox{\textwidth}{\vskip.2em 
+1. $x * y = x + 2y + 4$
+%   insert the statement of problem 5 above this line   
+\vskip.2em }} 
+\vskip1em 
+{\it Solution.} 
+%   insert your solution to problem 5 below this line 
+\\\textit{(i)} This is not commutative.
+ \[ x * y = x + 2y + 4;\ y * x = y + 2x + 4 \]
+\textit{(ii)} This is not associative.
+\[ x * (y * z) = x * (y + 2z + 4) = x + 2(y + 2z + 4) + 4 = x + 2y + 4z + 12 \]
+\[ (x * y) * z = (x + 2y + 4) * z = (x + 2y + 4) + 2z + 4 = x + 2y + 2z + 8 \]
+\textit{(iii)} There is no identity element.
+\[ x * e = x: \ x + 2e + 4 = x \Rightarrow e = -2 \]
+\[x * (-2) = x + 2(-2) + 4 = x \]
+\[(-2) * x = -2 + 2x + 4 \neq x \]
+\textit{(iv)} There is no identity, so there are no inverses.
+
+\fbox{\parbox{\textwidth}{\vskip.2em 
+2. $x * y = x + 2y -xy$
+%   insert the statement of problem 5 above this line   
+\vskip.2em }} 
+\vskip1em 
+{\it Solution.} 
+%   insert your solution to problem 5 below this line 
+\\\textit{(i)} This is not commutative.
+\[ x * y = x + 2y -xy; \ y * x = y + 2x -xy \]
+\textit{(ii)} This is not associative.
+\begin{align*}
+ x * (y * z) &= x * (y + 2z - yz) \\
+ &= x + 2(y + 2z - yz) - x(y + 2z -yz) \\
+ &= x + 2y + 4z - 2yz -xy -2xz + xyz \\
+\end{align*}  
+\begin{align*}
+(x * y) * z &= (x + 2y - xy) * z \\
+&= x + 2y -xy + 2z - (x + 2y -xy)z \\
+&= x + 2y - xy + 2z -xz -2yz + xyz
+\end{align*}
+\textit{(iii)} There is no identity element.
+\[ x * e = x; \ x + 2e - xe = x \Rightarrow e = 0 \]
+\[ x * 0 = x + 2(0) - x(0) = x \]
+\[ 0 * x = 0 + 2x - (0)x = 2x \]
+\textit{(iv)} There is no identity, so there are no inverses.
+
+\fbox{\parbox{\textwidth}{\vskip.2em 
+3. $x * y = |x + y|$
+%   insert the statement of problem 5 above this line   
+\vskip.2em }} 
+\vskip1em 
+{\it Solution.} 
+%   insert your solution to problem 5 below this line 
+\\\textit{(i)} The operation is commutative.
+\[ x * y = |x + y| \]
+\[y * x = |y + x| \]
+\textit{(ii)} The operation is not associative.
+\[ x * (y * z) = x * |y + z| = |x + |y + z|| \]
+\[ (x * y) * z = |x + y| * z = ||x + y| + z| \]
+\textit{(iii)} The operation has no identity element.
+\[ x * e = x\ \Rightarrow |x + e| = x;\ e = 0 \text{ and } e = -2x \]
+\textit{(iv)} There is no identity, so there are no inverses.
+
+\fbox{\parbox{\textwidth}{\vskip.2em 
+4.$x * y = |x - y|$
+%   insert the statement of problem 5 above this line   
+\vskip.2em }} 
+\vskip1em 
+{\it Solution.} 
+%   insert your solution to problem 5 below this line 
+\\\textit{(i)} The operation is commutative.
+\[ x * y = |x - y| \]
+\[y * x = |y - x| \]
+\textit{(ii)} The operation is not associative.
+\[ x * (y * z) = x * |y - z| = |x - |y - z|| \]
+\[ *x * y) * z = |x - y| * z = ||x - y| - z| \]
+\textit{(iii)} The operation has no identity element.
+\[ x * e = x \ \Rightarrow |x - e| = x; e = 0 \text{ and } e = 2x \]
+\textit{(iv)} There is no identity, so there are no inverses.
+
+
+\fbox{\parbox{\textwidth}{\vskip.2em 
+5. $x * y = xy + 1$
+%   insert the statement of problem 5 above this line   
+\vskip.2em }} 
+\vskip1em 
+{\it Solution.} 
+%   insert your solution to problem 5 below this line 
+\\\textit{(i)} The operation is commutative.
+\[ x * y = xy + 1 \]
+\[y * x = yx + 1 \]
+\textit{(ii)} The operation is not associative.
+\[ x * (y * z) = x * (yz + 1) = x(yz + 1) + 1 = xyz + x + 1 \]
+\[ (x * y) * z = (xy + 1) * z = (xy+1)z + 1 = xyz + z + 1 \]
+\textit{(iii)} The operation has no identity element.
+\[x * e = x \ \Rightarrow xe + 1 = x; e = \frac{x-1}{x} \]
+\textit{(iv)} There is no identity, so there are no inverses.
+
+\fbox{\parbox{\textwidth}{\vskip.2em 
+6. $x*y = \max(x, y)$
+%   insert the statement of problem 5 above this line   
+\vskip.2em }} 
+\vskip1em 
+{\it Solution.} 
+%   insert your solution to problem 5 below this line 
+\\\textit{(i)} The operation is commutative.
+\[ x * y = \max(x, y) \]
+\[ y * x = \max(y,x) \]
+\textit{(ii)} The operation is associative.
+\[ x * (y * z) = x * \text{ max}(y, z) = \max(x, \max(y, z)) \]
+\[ (x * y) * z = \max(x, y) * z = \max(\max(x, y), z) \]
+\textit{(iii)} The operation has no identity element.
+\[x * e = x \ \Rightarrow \max(x, e) = x; \ e \leq x \]
+\textit{(iv)} There is no identity, so there are no inverses.
+\newpage
+
+\fbox{\parbox{\textwidth}{\vskip.2em 
+7. $x * y = \frac{xy}{x + y + 1}$ on $\mathbb{R}^+$
+%   insert the statement of problem 5 above this line   
+\vskip.2em }} 
+\vskip1em 
+{\it Solution.} 
+%   insert your solution to problem 5 below this line 
+\\\textit{(i)} The operation is commutative.
+\[ x * y = \frac{xy}{x + y + 1} \]
+\[ y * x = \frac{yx}{y + x + 1} \]
+\textit{(ii)} The operation is associative.
+\[ x * (y * z) = x * \frac{yz}{y+ z + 1} = \frac{x\frac{yz}{y + z + 1}}{x + \frac{yz}{y+z +1} + 1} = \frac{xyz}{xy + xz + yz + x + y + z + 1} \]
+\[ (x * y) * z = \frac{xy}{x + y + 1} * z = \frac{\frac{xy}{x + y + 1}z}{\frac{xy}{x + y + z} + z + 1}  = \frac{xyz}{xy + xz + yz + x + y + z + 1} \]
+\textit{(iii)} The operation has no identity element.
+\[ x * e = x\ \Rightarrow \frac{xe}{x + e + 1} = x; \ \Rightarrow 0 = x^2 + x \]
+\textit{(iv)} There is no identity, so there are no inverses.
+
+\begin{center}
+\textbf{C. Operations on a Two -Element Set}
+\end{center}
+\begin{center}
+Let $A$ be the two-element set $A = \{a, b\}$.
+\end{center}
+\fbox{\parbox{\textwidth}{\vskip.2em 
+1. Write the tables of all 16 operations on $A$.
+%   insert the statement of problem 5 above this line   
+\vskip.2em }} 
+\vskip1em 
+{\it Solution.} 
+%   insert your solution to problem 5 below this line 
+\\\\O$_1$\begin{tabular}{c|c}
+$(x,y)$ & $x * y$ \\
+\hline
+$(a,a)$ & $a$ \\
+$(a,b)$ & $a$ \\
+$(b,a)$ & $a$ \\
+$(b,b)$ & $a$
+\end{tabular}
+\quad
+O$_{2}$\begin{tabular}{c|c}
+$(x,y)$ & $x * y$ \\
+\hline
+$(a,a)$ & $a$ \\
+$(a,b)$ & $a$ \\
+$(b,a)$ & $a$ \\
+$(b,b)$ & $b$
+\end{tabular}
+\quad
+O$_{3}$\begin{tabular}{c|c}
+$(x,y)$ & $x * y$ \\
+\hline
+$(a,a)$ & $a$ \\
+$(a,b)$ & $a$ \\
+$(b,a)$ & $b$ \\
+$(b,b)$ & $a$
+\end{tabular}
+\quad
+O$_{4}$\begin{tabular}{c|c}
+$(x,y)$ & $x * y$ \\
+\hline
+$(a,a)$ & $a$ \\
+$(a,b)$ & $a$ \\
+$(b,a)$ & $b$ \\
+$(b,b)$ & $b$
+\end{tabular}
+\\\\\\O$_{5}$\begin{tabular}{c|c}
+$(x,y)$ & $x * y$ \\
+\hline
+$(a,a)$ & $a$ \\
+$(a,b)$ & $b$ \\
+$(b,a)$ & $a$ \\
+$(b,b)$ & $a$
+\end{tabular}
+\quad
+O$_{6}$\begin{tabular}{c|c}
+$(x,y)$ & $x * y$ \\
+\hline
+$(a,a)$ & $a$ \\
+$(a,b)$ & $b$ \\
+$(b,a)$ & $a$ \\
+$(b,b)$ & $b$
+\end{tabular}
+\quad
+O$_{7}$\begin{tabular}{c|c}
+$(x,y)$ & $x * y$ \\
+\hline
+$(a,a)$ & $a$ \\
+$(a,b)$ & $b$ \\
+$(b,a)$ & $b$ \\
+$(b,b)$ & $a$
+\end{tabular}
+\quad
+O$_{8}$\begin{tabular}{c|c}
+$(x,y)$ & $x * y$ \\
+\hline
+$(a,a)$ & $a$ \\
+$(a,b)$ & $b$ \\
+$(b,a)$ & $b$ \\
+$(b,b)$ & $b$
+\end{tabular}
+\\O$_{9}$\begin{tabular}{c|c}
+$(x,y)$ & $x * y$ \\
+\hline
+$(a,a)$ & $b$ \\
+$(a,b)$ & $a$ \\
+$(b,a)$ & $a$ \\
+$(b,b)$ & $a$
+\end{tabular}
+\quad
+O$_{10}$\begin{tabular}{c|c}
+$(x,y)$ & $x * y$ \\
+\hline
+$(a,a)$ & $b$ \\
+$(a,b)$ & $a$ \\
+$(b,a)$ & $a$ \\
+$(b,b)$ & $b$
+\end{tabular}
+\quad
+O$_{11}$\begin{tabular}{c|c}
+$(x,y)$ & $x * y$ \\
+\hline
+$(a,a)$ & $b$ \\
+$(a,b)$ & $a$ \\
+$(b,a)$ & $b$ \\
+$(b,b)$ & $a$
+\end{tabular}
+\quad
+O$_{12}$\begin{tabular}{c|c}
+$(x,y)$ & $x * y$ \\
+\hline
+$(a,a)$ & $b$ \\
+$(a,b)$ & $a$ \\
+$(b,a)$ & $b$ \\
+$(b,b)$ & $b$
+\end{tabular}
+\\\\\\O$_{13}$\begin{tabular}{c|c}
+$(x,y)$ & $x * y$ \\
+\hline
+$(a,a)$ & $b$ \\
+$(a,b)$ & $b$ \\
+$(b,a)$ & $a$ \\
+$(b,b)$ & $a$
+\end{tabular}
+\quad
+O$_{14}$\begin{tabular}{c|c}
+$(x,y)$ & $x * y$ \\
+\hline
+$(a,a)$ & $b$ \\
+$(a,b)$ & $b$ \\
+$(b,a)$ & $a$ \\
+$(b,b)$ & $b$
+\end{tabular}
+\quad
+O$_{15}$\begin{tabular}{c|c}
+$(x,y)$ & $x * y$ \\
+\hline
+$(a,a)$ & $b$ \\
+$(a,b)$ & $b$ \\
+$(b,a)$ & $b$ \\
+$(b,b)$ & $a$
+\end{tabular}
+\quad
+O$_{16}$\begin{tabular}{c|c}
+$(x,y)$ & $x * y$ \\
+\hline
+$(a,a)$ & $b$ \\
+$(a,b)$ & $b$ \\
+$(b,a)$ & $b$ \\
+$(b,b)$ & $b$
+\end{tabular}
+
+\fbox{\parbox{\textwidth}{\vskip.2em 
+2. Identify which of the operations 0$_1$ to O$_{16}$ are commutative.
+%   insert the statement of problem 5 above this line   
+\vskip.2em }} 
+\vskip1em 
+{\it Solution.} 
+%   insert your solution to problem 5 below this line 
+O$_1$, O$_2$, O$_7$, O$_8$, O$_9$, O$_{10}$, O$_{15}$, O$_{16}$ are all commutative as $a * b = b * a$.
+\\\\\fbox{\parbox{\textwidth}{\vskip.2em 
+3. Identify which of the operations, among 0$_1$ to O$_{16}$, are associative.
+%   insert the statement of problem 5 above this line   
+\vskip.2em }} 
+\vskip1em 
+{\it Solution.} 
+%   insert your solution to problem 5 below this line 
+\\O$_1$: is associative.
+\\O$_3$: $b * (a * b) = b * a = b \neq (b * a) * b = b * b = a$
+\\O$_4$: is associative.
+\\O$_5$: $b * (a * b) = b * b = a \neq (b * a) * b = a * b = b$
+\\O$_6$: is associative.
+\\O$_7$: is associative.
+\\O$_8$: is associative.
+\\O$_9$: $a * (a * b) = a * a = b \neq (a * a) * b = b * b = a$.
+\\O$_{10}$: is associative.
+\\O$_{11}$: $a * (a * b) = a * a = b \neq (a * a) * b = b * b = a$.
+\\O$_{12}$: $a * (b * a) = a * b = a \neq (a * b) * a = a * a = b$.
+\\O$_{13}$: $a * (b * a) = a * a = b \neq (a * b) * a = b * a = a$.
+\\O$_{14}$: $a * (b * a) = a * a = b \neq (a * b) * a = b * a = a$.
+\\O$_{15}$: $a * (a * b) = a * b = b \neq (a * a) * b = b * b = a$.
+\\O$_(16)$: is associative.
+
+\fbox{\parbox{\textwidth}{\vskip.2em 
+4. For  which of the operations 0$_1$ to O$_{16}$ is there an identity element.
+%   insert the statement of problem 5 above this line   
+\vskip.2em }} 
+\vskip1em 
+{\it Solution.} 
+%   insert your solution to problem 5 below this line 
+O$_2$, O$_7$, O$_8$, O$_{10}$
+
+\newpage
+\fbox{\parbox{\textwidth}{\vskip.2em 
+5. For  which of the operations 0$_1$ to O$_{16}$ does every element have an inverse.
+%   insert the statement of problem 5 above this line   
+\vskip.2em }} 
+\vskip1em 
+{\it Solution.} 
+%   insert your solution to problem 5 below this line 
+We only have to look at the operations that have inverses. For O$_2$ $a$ does not have an inverse, and for O$_8$ $b$ does not have an inverse. Each element of O$_7$ and O$_{10}$ is its own inverse.
+
+\textbf{\begin{center}
+D. Automata: The Algebra of Input/Output Sequences 
+\end{center}}
+
+\fbox{\parbox{\textwidth}{\vskip.2em 
+1. Prove the operation defined above is associative.
+%   insert the statement of problem 5 above this line   
+\vskip.2em }} 
+\vskip1em 
+{\it Proof:} 
+%   insert your solution to problem 5 below this line 
+Let $a,b,c \in A^*$ where $a = a_1a_2\ldots a_i$, $b = b_1b_2\ldots b_j$ and $c = c_1c_2\ldots c_k$. Then $(ab)c = (a_1a_2\ldots a_ib_1b_2\ldots b_j)c = a_1a_2\ldots a_ib_1b_2\ldots b_jc_1c_2\ldots c_k$
+\\And $a(bc) = a(b_1b_2\ldots b_jc_1c_2\ldots c_k) = a_1a_2\ldots a_ib_1b_2\ldots b_jc_1c_2\ldots c_k$.
+\\$\therefore a(bc) = (ab)c$ and concatenation is associative. $\blacksquare$
+
+
+\fbox{\parbox{\textwidth}{\vskip.2em 
+2. Explain why the operation is not commutative.
+%   insert the statement of problem 5 above this line   
+\vskip.2em }} 
+\vskip1em 
+{\it Solution.} 
+%   insert your solution to problem 5 below this line
+The operation is not commutative as it can be shown that $ab \neq ba$. For example let $a = 111$ and $b = 000$ be elements of $A = \{0,1\}$ then $ab = 111000$ and $ba = 000111$. 
+ 
+
+\fbox{\parbox{\textwidth}{\vskip.2em 
+3. Prove that there is an identity element for this operation.
+%   insert the statement of problem 5 above this line   
+\vskip.2em }} 
+\vskip1em 
+{\it Proof:} 
+%   insert your solution to problem 5 below this line 
+Let $a \in A^*$ Then
+\[ a\lambda = a \text{ and } \lambda a = a \]
+Therefore $\lambda$ is an identity element by definition of identity. $\blacksquare$
+
+
+\end{document}
